@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino Run</title>
+  <link rel="stylesheet" href="dino.css">
+
+</head>
+
+<body>
+
+  <h1>DINO RUN</h1>
+
+  <button onclick="stopGame()" class="stop">
+      ⏸
+    </button>
+
+    <a href="index.html" class="back-btn">
+        BACK
+    </a>
+
+  <p id="score">Score : 0</p>
+  <p id="level">Level : 1</p>
+
+  <canvas id="game" width="800" height="300"></canvas>
+
+  <div class="controls">
+
+    <button onclick="jump()">
+      JUMP
+    </button>
+
+    <button onclick="restartGame()">
+      RESTART
+    </button>
+
+  </div>
+
+  <script src="dino.js"></script>
+
+</body>
+</html>

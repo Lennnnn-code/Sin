@@ -1,0 +1,65 @@
+body{
+  margin:0;
+
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  background:black;
+  color:#00ff88;
+
+  font-family:monospace;
+}
+
+h1{
+  text-shadow:
+  0 0 10px #00ff88;
+}
+
+canvas{
+  width:90vw;
+  max-width:800px;
+
+  background:#111;
+
+  border:3px solid #00ff88;
+
+  box-shadow: rgba(206, 79, 5, 0.781);
+}
+
+.controls{
+  margin-top:20px;
+
+  display:flex;
+  gap:15px;
+}
+
+button{
+  width:120px;
+  height:50px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#00ff88;
+  color:black;
+
+  font-size:18px;
+  font-weight:bold;
+}
+
+.stop{
+  background:none;
+  color:white;
+  align-self: flex-start;
+  box-shadow: rgba(206, 79, 5, 0.781);
+}
+
+.back-btn{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

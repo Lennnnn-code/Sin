@@ -1,0 +1,100 @@
+body{
+  margin:0;
+  height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  background:black;
+  color:#00ff88;
+
+  font-family:monospace;
+}
+
+h1{
+  margin-bottom:20px;
+
+  text-shadow:
+  0 0 10px #00ff88,
+  0 0 20px #00ff88;
+}
+
+canvas{
+  border:3px solid #00ff88;
+  width: 90vw;
+  max-width:300px;
+
+  height:auto;
+
+  box-shadow:
+  0 0 20px #00ff88;
+
+  background:#111;
+}
+
+#score{
+  margin-top:20px;
+  font-size:25px;
+}
+
+.controls{
+  margin-top:20px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+.middle-btn{
+  display:flex;
+  gap:10px;
+}
+
+button{
+  width:70px;
+  height:70px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#00ff88;
+  color:black;
+
+  font-size:30px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  box-shadow:
+  0 0 10px #00ff88;
+}
+
+button:active{
+  transform:scale(0.9);
+}
+
+.restart{
+  width:160px;
+  font-size:20px;
+}
+
+.stop{
+  background:none;
+  color:white;
+  align-self: flex-start;
+}
+
+.dpad{
+    display:grid;
+    grid-template-columns: 70px 70px 70px;
+    gap: 10px;
+}
+
+.back-btn{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
