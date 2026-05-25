@@ -30,6 +30,8 @@ const player = {
 
     direction:1,
 
+    moving:false,
+
     attacking:false,
 
     attackingAngel:0,
@@ -51,6 +53,8 @@ const enemy = {
     speed:3,
 
     direction:-1,
+
+    moving:false,
 
     attacking:false,
 
@@ -167,12 +171,16 @@ attackBtn.onpointerdown = () => {
 
 function movePlayer(){
 
+    player.moving=false;
+
     // kiri
     if(keys["a"]){
 
         player.x -= player.speed;
 
         player.direction = -1;
+
+        player.moving = true;
 
     }
 
@@ -182,6 +190,8 @@ function movePlayer(){
         player.x += player.speed;
 
         player.direction = 1;
+
+        player.moving = true;
 
     }
 
@@ -216,7 +226,7 @@ function drawStickman(character){
 
     let walk = 0;
 
-    if(keys["a"] || keys["d"]){
+    if(character.moving){
 
     walk = Math.sin(Date.now() * 0.02) * 10;
 
@@ -245,7 +255,7 @@ function drawStickman(character){
     // tangan
     ctx.beginPath();
 
-    ctx.moveTo(character.x - 25, character.y - 50);
+    ctx.moveTo(character.x - 25, character.y - 50 - walk * 0.3);
 
     ctx.lineTo(character.x + 25, character.y - 50 + walk * 0.3);
 
@@ -422,11 +432,15 @@ function attackHit(){
 
 function enemyAI(){
 
+    enemy.moving = false;
+
     if(enemy.x > player.x + 80){
 
         enemy.x -= enemy.speed;
 
         enemy.direction = -1;
+
+        enemy.moving = true;
 
     }
 
@@ -435,6 +449,8 @@ function enemyAI(){
         enemy.x += enemy.speed;
 
         enemy.direction = 1;
+
+        enemy.moving = true;
 
     }
 

@@ -67,15 +67,21 @@ function draw(){
     ctx.fillStyle =
     i == 0 ? "#00ff88" : "#00cc66";
 
-    ctx.fillRect(
-      snake[i].x,
-      snake[i].y,
-      box,
-      box
+    ctx.beginPath();
+
+    ctx.arc(
+
+       snake[i].x + box / 2,
+       snake[i].y + box / 2,
+       box / 2.3,
+       0,
+       Math.PI * 2
+
     );
 
+    ctx.fill();
+    
   }
-
   let headX = snake[0].x;
   let headY = snake[0].y;
 
