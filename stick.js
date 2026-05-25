@@ -476,12 +476,12 @@ function collision(){
     }
 }
 
-document.body.addEventListener("click", ()=>{
+window.onload = () => {
 
     if(document.documentElement.requestFullscreen){
 
         document.documentElement.requestFullscreen();
     }
-});
+};
 
 gameLoop();

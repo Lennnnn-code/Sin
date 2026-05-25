@@ -210,3 +210,9 @@ canvas{
 
     right:0;
 }
+
+body{
+
+    overscroll-behavior:none;
+    touch-action:none;
+}
